@@ -11,6 +11,6 @@ Thumbs.db
 
 # Node modules and output
 node_modules
-!dist/.nojekyll
 dist
+!dist/.nojekyll
 src/_includes/css
