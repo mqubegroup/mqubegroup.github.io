@@ -1,5 +1,5 @@
 module.exports = config => {
-  config.addPassthroughCopy('./src/images/');
+  config.addPassthroughCopy('./src/images/');  
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   config.setUseGitIgnore(false);
   return {
