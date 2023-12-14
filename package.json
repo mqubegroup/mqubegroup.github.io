@@ -4,15 +4,22 @@
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy",
-    "build:prod": "npx @11ty/eleventy",
+    "start": "npx gulp && concurrently \"npx gulp watch\" \"npx @11ty/eleventy --serve\"",
+    "build": "npx gulp && npx @11ty/eleventy",
+    "build:prod": "NODE_ENV=production npx gulp && NODE_ENV=production npx @11ty/eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.1.0",
+    "concurrently": "^8.2.2",
+    "get-google-fonts": "^1.2.2",
+    "gulp-imagemin": "^9.0.0",
+    "gorko": "^0.9.1"
   }
 }
