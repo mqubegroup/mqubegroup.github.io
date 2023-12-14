@@ -4,4 +4,6 @@
     <h1>{{ title }}</h1>
     {{ content | safe }}
   </article>
+  {% set ctaContent = primaryCTA %} 
+  {% include "partials/cta.html" %} 
 {% endblock %}
