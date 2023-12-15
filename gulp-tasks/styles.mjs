@@ -6,6 +6,7 @@ import autoprefixer from "autoprefixer";
 const styles = () => {
   return gulp
     .src("./src/assets/css/**/*.css")
+    .pipe(postcss([tailwindcss('./tailwind.config.js'), autoprefixer()]))
     .pipe(gulp.dest("./dist/assets/css"));
 };
 
