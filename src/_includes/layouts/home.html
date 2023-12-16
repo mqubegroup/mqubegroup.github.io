@@ -1,23 +1,35 @@
 {% extends "layouts/base.html" %}
 {% set pageCriticalStyles = ['css/home.css'] %}
 {% block content %}
-<div class="wrapper">
-  <article class="intro">
-    <div class="[ intro__header ] [ radius frame ]">
-      <h1 class="[ intro__heading ] [ weight-normal text-400 md:text-600 ]">
-        {{ intro.eyebrow }}
-        <em class="text-800 md:text-900 lg:text-major weight-bold">{{ intro.main }}</em>
-      </h1>
+
+<div class="hero-body">
+  <div class="container">
+    <div class="columns is-vcentered">
+      <div class="column is-5">
+        <figure class="image">
+          <img src="/images/embark.png" alt="Description">
+        </figure>
+      </div>
+      <div class="column is-6 is-offset-1">
+        <h1 class="title is-2">
+          Explore the world with Legacy
+        </h1>
+        <p class="is-4">
+          Navigating the intricacies of travel can be daunting. Trust Legacy Travels to expertly handle the logistics, allowing you to focus on the joy of discovery.
+        </p>
+        <br>
+        <p class="has-text-centered">
+          <a class="button is-medium is-info is-outlined" href="/contact/">
+            Learn more
+          </a>
+        </p>
+      </div>
     </div>
-    <div class="[ intro__content ] [ flow ]">
-      <p class="intro__summary">{{ intro.summary }}</p>
-      <a href="{{ intro.buttonUrl }}" class="button">{{ intro.buttonText }}</a>
-    </div>
-    <div class="[ intro__media ] [ radius dot-shadow ]">
-      <img class="[ intro__image ] [ radius ]" src="{{ intro.image }}" alt="{{ intro.imageAlt }}" />
-    </div>
-  </article>
+  </div>
+  <div class="box cta">
+    <p class="has-text-centered">
+        <span class="tag is-primary">New</span> We are working on our new site. We continue to support our customers. Please contact at <a href="mailto:support@legacy-travels.com">support@legacy-travels.com</a> for enquiries.
+    </p>
 </div>
-{% set ctaContent = cta %}
-{% include "partials/cta.html" %}
+</div>
 {% endblock %}

@@ -11,7 +11,7 @@ module.exports = {
       let response = '';
   
       if (itemUrl === pageUrl) {
-        response = ' aria-current="page"';
+        response = ' class="is-active" aria-current="page"';
       }
   
       if (itemUrl.length > 1 && pageUrl.indexOf(itemUrl) === 0) {

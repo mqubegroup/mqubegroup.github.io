@@ -1,3 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.logo {
+    height: 200px;
+    width: 85px;
+}
+
+.site-name {
+    font-size: 36px;
+    color: #0073be;
+}

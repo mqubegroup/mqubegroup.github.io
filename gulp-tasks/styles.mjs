@@ -1,12 +1,8 @@
 import gulp from "gulp";
-import postcss from "gulp-postcss";
-import tailwindcss from "tailwindcss";
-import autoprefixer from "autoprefixer";
 
 const styles = () => {
   return gulp
     .src("./src/assets/css/**/*.css")
-    .pipe(postcss([tailwindcss('./tailwind.config.js'), autoprefixer()]))
     .pipe(gulp.dest("./dist/assets/css"));
 };
 

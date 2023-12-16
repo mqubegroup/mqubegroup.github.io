@@ -1,105 +1,69 @@
 {% set assetHash = global.random() %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Legacy Travels | {{ title }}</title>
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/images/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/images/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/images/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/images/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="/images/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta charset="utf-8" />
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Travels, Book Tickets, Booking, vacation, getaways, travel deals, discounts, Hajj, Umrah"
-    />
-    <link rel="canonical" href="https://legacy-travels.com/" />
-    <meta name="referrer" content="no-referrer-when-downgrade" />
 
-    <meta property="og:site_name" content="Legacy Travels" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Legacy Travels" />
-    <meta
-      property="og:description"
-      content="Legacy Travels, Travels, Book Tickets, Booking, vacation, getaways, travel deals, discounts, Hajj, Umrah, Hajj Umrah packages"
-    />
-    <meta property="og:url" content="https://legacy-travels.com/" />
-    <meta
-      property="og:image"
-      content="https://legacy-travels.com/images/2023/12/Embark-on-a-Journey-with-Legacy-Travels.png"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Legacy Travels" />
-    <meta
-      name="twitter:description"
-      content="Legacy Travels, Travels, Book Tickets, Booking, vacation, getaways, travel deals, discounts, Hajj, Umrah, Hajj Umrah packages"
-    />
-    <meta name="twitter:url" content="https://legacy-travels.com/" />
-    <meta
-      name="twitter:image"
-      content="https://legacy-travels.com/images/2023/12/Embark-on-a-Journey-with-Legacy-Travels.png"
-    />
-    <meta name="twitter:site" content="@ghost" />
-    <meta property="og:image:width" content="1080" />
-    <meta property="og:image:height" content="566" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Legacy Travels | {{ title }}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+  <link rel="manifest" href="/images/site.webmanifest" />
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta charset="utf-8" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Travels, Book Tickets, Booking, vacation, getaways, travel deals, discounts, Hajj, Umrah" />
+  <link rel="canonical" href="https://legacy-travels.com/" />
+  <meta name="referrer" content="no-referrer-when-downgrade" />
 
-    <link rel="stylesheet" href="/assets/css/main.css?{{ assetHash }}" />
-    <link rel="stylesheet" href="/assets/css/style.css?{{ assetHash }}" />
-    <link
-      rel="stylesheet"
-      media="print"
-      href="/fonts/fonts.css?{{ assetHash }}"
-      onload="this.media='all'"
-    />
+  <meta property="og:site_name" content="Legacy Travels" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Legacy Travels" />
+  <meta property="og:description"
+    content="Legacy Travels, Travels, Book Tickets, Booking, vacation, getaways, travel deals, discounts, Hajj, Umrah, Hajj Umrah packages" />
+  <meta property="og:url" content="https://legacy-travels.com/" />
+  <meta property="og:image"
+    content="https://legacy-travels.com/images/2023/12/Embark-on-a-Journey-with-Legacy-Travels.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Legacy Travels" />
+  <meta name="twitter:description"
+    content="Legacy Travels, Travels, Book Tickets, Booking, vacation, getaways, travel deals, discounts, Hajj, Umrah, Hajj Umrah packages" />
+  <meta name="twitter:url" content="https://legacy-travels.com/" />
+  <meta name="twitter:image"
+    content="https://legacy-travels.com/images/2023/12/Embark-on-a-Journey-with-Legacy-Travels.png" />
+  <meta name="twitter:site" content="@ghost" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="566" />
 
-    {# Add facility for pages to declare an array of stylesheet paths #} {% if
-    pageStylesheets %} {% for item in pageStylesheets %}
-    <link
-      rel="stylesheet"
-      media="print"
-      href="{{ item }}?{{ assetHash }}"
-      onload="this.media='all'"
-    />
-    {% endfor %} {% endif %}
-  </head>
-  <body class="text-gray-700 antialiased bg-white">
-    <div class="site-wrap">
+  <link rel="stylesheet" href="/assets/css/main.css?{{ assetHash }}" />
+  <link rel="stylesheet" href="/assets/css/style.css?{{ assetHash }}" />
+  <link rel="stylesheet" media="print" href="/fonts/fonts.css?{{ assetHash }}" onload="this.media='all'" />
+
+  {# Add facility for pages to declare an array of stylesheet paths #} {% if
+  pageStylesheets %} {% for item in pageStylesheets %}
+  <link rel="stylesheet" media="print" href="{{ item }}?{{ assetHash }}" onload="this.media='all'" />
+  {% endfor %} {% endif %}
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
       {% include "partials/site-head.html" %}
 
       <main tabindex="-1" id="main-content">
         {% block content %}{% endblock %}
       </main>
 
-      <footer role="contentinfo" class="site-foot">
-        <div class="wrapper">
-          <p>&copy;2023 MQUBE Group.</p>
-        </div>
-      </footer>
+      {% include "partials/footer.html" %}
     </div>
-  </body>
+  </section>
+</body>
+
 </html>
